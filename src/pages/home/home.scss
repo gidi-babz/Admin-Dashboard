@@ -1,13 +1,18 @@
 .home {
-	display: flex;
+  display: flex;
 
-	.homeContainer {
-		flex: 6;
+  .homeContainer {
+    flex: 6;
 
-		.widgets {
-			display: flex;
-			padding: 2.4rem;
-			gap: 2rem;
-		}
-	}
+    .widgets,
+    .charts {
+      display: flex;
+      padding: 2.4rem;
+      gap: 2rem;
+    }
+
+    .charts {
+      padding: 0.5rem 2rem;
+    }
+  }
 }
