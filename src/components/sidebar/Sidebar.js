@@ -15,7 +15,7 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 const Sidebar = () => {
 	return (
-		<div className="sidebar">
+		<aside className="sidebar">
 			<div className="top">
 				<span className="logo"> babzadmin</span>
 			</div>
@@ -81,7 +81,7 @@ const Sidebar = () => {
 				<div className="colorOption"></div>
 				<div className="colorOption"></div>
 			</div>
-		</div>
+		</aside>
 	);
 };
 
