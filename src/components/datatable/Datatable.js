@@ -31,6 +31,7 @@ const Datatable = () => {
         </Link>
       </div>
       <DataGrid
+        className="dataGrid"
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
         style={{ fontSize: '1.4rem' }}
