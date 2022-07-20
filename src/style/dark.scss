@@ -23,6 +23,11 @@
 
       input {
         color: gray;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
       }
     }
   }
@@ -67,12 +72,15 @@
     }
   }
 
-  input {
-    background-color: transparent;
+  .new {
+    .right {
+      input {
+        background-color: transparent;
 
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px lightgray !important;
+        &:focus {
+          box-shadow: 0 0 0 2px lightgray !important;
+        }
+      }
     }
   }
 }

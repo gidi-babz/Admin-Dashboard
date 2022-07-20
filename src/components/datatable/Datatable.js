@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './datatable.scss';
 
@@ -5,6 +7,20 @@ import { DataGrid } from '@mui/x-data-grid';
 import { userColumns, userRows } from '../../datatablesource';
 
 const Datatable = () => {
+  const [page, setPage] = useState('');
+
+  const currentURL = useLocation().pathname;
+
+  useEffect(() => {
+    if (currentURL === '/users') {
+      setPage(currentURL);
+    }
+
+    if (currentURL === '/products') {
+      setPage(currentURL);
+    }
+  }, [page, currentURL]);
+
   const actionColumn = [
     {
       field: 'action',
@@ -25,8 +41,8 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add New User
-        <Link to="/users/new" className="link">
+        {page === '/users' ? 'Add New User' : 'Add New Product'}
+        <Link to={`${page}/new`} className="link">
           Add New
         </Link>
       </div>
