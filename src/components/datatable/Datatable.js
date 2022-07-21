@@ -62,6 +62,7 @@ const Datatable = () => {
         rows={data}
         columns={userColumns.concat(actionColumn)}
         style={{ fontSize: '1.4rem' }}
+        sx={{ fontSize: '1.6rem', color: 'inherit' }}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
