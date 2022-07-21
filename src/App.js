@@ -12,6 +12,7 @@ import { DarkModeContext } from './context/darkModeContext';
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
+
   return (
     <div className={darkMode ? 'app dark' : 'app'}>
       <BrowserRouter>
